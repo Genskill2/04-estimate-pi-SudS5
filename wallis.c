@@ -23,4 +23,18 @@ int main(void) {
     }
   }
 }
+float wallis_pi(int i) {
+	float num, den, frac, pi, prod = 1;
+	int j;
+		
+	for(j=1;j<i;j++)
+	{
+	num = 4*j*j;
+	den = num-1;
+	frac = num/den;
+	prod = prod*frac;
+	}
+	
+	pi = prod*2;
+}
 
