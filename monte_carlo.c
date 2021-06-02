@@ -38,6 +38,25 @@ int main(void) {
     }
   }
 }
+float mc_pi(int n){
+    double randx, randy, equation, pi;
+    long long i, in_circle = 0;
 
+    for(i = 0; i < n; i++){
+        randx = random();
+        randy = random();
+
+        equation = randx * randx + randy * randy;
+	double RMAX = ((double)RAND_MAX*(double)RAND_MAX);
+
+        if(equation <= RMAX){
+            in_circle++;
+        }
+    }
+
+    pi = (long double)4 * (long double)in_circle / (long double)n;
+
+    return pi;
+}
 
 
